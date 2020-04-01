@@ -33,3 +33,26 @@ const render = require("./lib/htmlRenderer");
 // for further information. Be sure to test out each class and verify it generates an 
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work!```
+const inquirer = require("inquirer");
+const fs = require("fs");
+const axios = require("axios");
+
+const questions = [
+"How many employees do you have?", 
+"How many of your employees are engineers?", 
+"How many of your employees are interns?",
+"How many of your employees are managers?",
+];
+inquirer.prompt([
+    {
+        type: "input",
+        message: questions[0],
+        name: "userName",
+    }
+]).then(function(data) {
+      fs.writeFile("//putstuffhere//"), function(err) {
+        if (err) {
+          throw err;
+        }
+    });
+});
