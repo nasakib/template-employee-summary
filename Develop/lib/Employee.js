@@ -1,26 +1,27 @@
 // TODO: Write code to define and export the Employee class
-
-function Employee (name,id,email)  {
+let Employee = class {
+constructor(name,id,email) {
     this.name = name;
     this.id = id;
     this.email = email;
 }
-
-
-Employee.prototype.setName = (name) => {
-    this.name = name;
+getName() {
+    return this.name;
 }
 
-Employee.prototype.setId = (id) => {
-    this.id = id;
+
+
+setName(newName) {
+    this.name = newName;
 }
 
-Employee.prototype.setEmail = (email) => {
-    this.email = email;
+setId(newId){
+    this.id = newId;
 }
 
-Employee.getName = () => {
-    return Employee.prototype.name;
+setEmail(newEmail){
+    this.email = newEmail;
+}
 }
 
 module.exports = Employee;
