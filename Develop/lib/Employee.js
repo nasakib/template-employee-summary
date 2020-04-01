@@ -18,7 +18,7 @@ getEmail() {
 }
 
 getRole() {
-    return "Employee"
+    return this.constructor.name;
 }
 
 
